@@ -11,7 +11,7 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: UTC
   # Customization file
-  customize: !include customize.yaml
+  customize: !include includes/customize.yaml
 
 influxdb:
   host: !secret influx_host
@@ -83,6 +83,6 @@ panel_iframe:
     icon: mdi:auto-fix
     url: !secret nodered_url
 
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
+group: !include includes/groups.yaml
+automation: !include includes/automations.yaml
+script: !include includes/scripts.yaml
