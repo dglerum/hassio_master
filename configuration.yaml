@@ -5,12 +5,13 @@
 ###################################################
 
 homeassistant:
-  name: Home
-  latitude: 0
-  longitude: 0
+  name: !secret name
+  temperature_unit: C
+  time_zone: Europe/Brussels
+  latitude: !secret latitude
+  longitude: !secret longitude
   elevation: 0
   unit_system: metric
-  time_zone: UTC
   customize: !include includes/customize.yaml
   packages: !include_dir_named packages
 
@@ -28,7 +29,7 @@ panel_iframe:
 
   nodered:
     title: Node-Red
-    icon: mdi:auto-fix
+    icon:  mdi:shuffle-variant
     url: !secret nodered_url
 
 ###################################################
@@ -48,14 +49,6 @@ influxdb:
 
 ####################################################
 #                                                  #
-#                 Customizations                   #
-#                                                  #
-####################################################
-
-frontend:
-
-####################################################
-#                                                  #
 #                      MQTT                        #
 #                                                  #
 ####################################################
@@ -64,6 +57,8 @@ mqtt:
   broker: core-mosquitto
 #   username: !secret mozzieuser
 #   password: !secret mozziepass
+
+frontend:
 
 http:
   api_password: !secret http_password
