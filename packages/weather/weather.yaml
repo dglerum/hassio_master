@@ -57,7 +57,7 @@ sensor:
   - platform: moon
 ## Weather Sensors Weatherunderground
   - platform: wunderground
-    api_key: !secret wunderground_api
+    api_key: !secret wunderground_key
     pwd_id: !secret wunderground_pws_id
     monitored_conditions:
       - relative_humidity
