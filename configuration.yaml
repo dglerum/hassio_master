@@ -55,8 +55,8 @@ influxdb:
 
 mqtt:
   broker: core-mosquitto
-#   username: !secret mozzieuser
-#   password: !secret mozziepass
+  username: !secret mozzieuser
+  password: !secret mozziepass
 
 frontend:
 
