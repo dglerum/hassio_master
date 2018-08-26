@@ -47,6 +47,13 @@ influxdb:
   max_retries: 3
   default_measurement: state
 
+remote:
+  - platform: harmony
+    name: Logitech Harmony
+    host: !secret harmony_hub_ip
+    activity: 25367510
+    # scan_interval: 10
+
 ####################################################
 #                                                  #
 #                      MQTT                        #
@@ -67,9 +74,8 @@ config:
 updater:
 discovery:
 conversation:
-
-# history:
-# logbook:
+history:
+logbook:
 # map:
 # cloud:
 
