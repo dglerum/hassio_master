@@ -1,0 +1,4 @@
+'1523505263098':
+  alias: Start Apple Homekit
+  sequence:
+    service: homekit.start

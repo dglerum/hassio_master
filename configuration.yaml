@@ -17,7 +17,7 @@ homeassistant:
 
 ###################################################
 #                                                 #
-#                     Panel                       #
+#                     Panels                      #
 #                                                 #
 ###################################################
 
@@ -46,6 +46,12 @@ influxdb:
   password: !secret influx_passsword
   max_retries: 3
   default_measurement: state
+
+###################################################
+#                                                 #
+#                     Remotes                     #
+#                                                 #
+###################################################
 
 remote:
   - platform: harmony

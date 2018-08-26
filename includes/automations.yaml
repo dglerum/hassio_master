@@ -6,10 +6,11 @@
 
 - action:
   - delay: 00:05  # Waits 5 minutes
-  - service: homekit.start
-  alias: Start Apple HomeKit
+  - service: script.1523505263098
+  alias: Start Apple Homekit
   condition: []
   id: '1523506259174'
   trigger:
   - platform: homeassistant
     event: start
+  
