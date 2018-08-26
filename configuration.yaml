@@ -65,24 +65,17 @@ mqtt:
 #   username: !secret mozzieuser
 #   password: !secret mozziepass
 
-config:
 http:
+  api_password: !secret http_password
+
+config:
 updater:
 discovery:
 conversation:
+
 # history:
 # logbook:
-map:
-sun:
-
-sensor:
-  - platform: yr
-
-# Text to speech
-tts:
-  - platform: google
-
-# Cloud
+# map:
 # cloud:
 
 ####################################################
@@ -94,3 +87,5 @@ tts:
 group: !include includes/groups.yaml
 automation: !include includes/automations.yaml
 script: !include includes/scripts.yaml
+zone: !include includes/zones.yaml
+media_player: !include includes/media_players.yaml
