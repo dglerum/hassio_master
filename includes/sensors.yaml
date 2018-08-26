@@ -12,3 +12,12 @@
       - time_date
       - time_utc
       - beat
+
+####################################################
+#                                                  #
+#               Certificate Expiry                 #
+#                                                  #
+####################################################
+
+- platform: cert_expiry
+  host: dglerum.noip.me

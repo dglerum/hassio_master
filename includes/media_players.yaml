@@ -18,3 +18,13 @@
   host: 192.168.1.13
   password: kodi
   name: Computer
+
+####################################################
+#                                                  #
+#                      Sony Bravia                 #
+#                                                  #
+####################################################
+
+- platform: dlna_dmr
+  name: Sony TV
+  url: !secret sony_dlna_url
