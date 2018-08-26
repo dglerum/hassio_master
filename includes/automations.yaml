@@ -1,0 +1,15 @@
+####################################################
+#                                                  #
+#                      System                      #
+#                                                  #
+####################################################
+
+- action:
+  - delay: 00:05  # Waits 5 minutes
+  - service: homekit.start
+  alias: Start Apple HomeKit
+  condition: []
+  id: '1523506259174'
+  trigger:
+  - platform: homeassistant
+    event: start

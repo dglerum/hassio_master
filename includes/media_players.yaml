@@ -25,6 +25,6 @@
 #                                                  #
 ####################################################
 
-- platform: dlna_dmr
-  name: Sony TV
-  url: !secret sony_dlna_url
+# - platform: dlna_dmr
+#   name: Sony TV
+#   url: !secret sony_dlna_url
