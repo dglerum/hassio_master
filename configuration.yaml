@@ -64,6 +64,10 @@ http:
 #                      Hass.io                     #
 ####################################################
 
+recorder:
+  purge_interval: 2
+  purge_keep_days: 5
+
 frontend:
 config:
 updater:
