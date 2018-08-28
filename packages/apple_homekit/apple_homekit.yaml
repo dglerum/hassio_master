@@ -1,0 +1,26 @@
+#################################################################
+#                                                               #
+#                      Packages/Apple Homekit                   #
+#                                                               #
+#################################################################
+
+homekit:
+  auto_start: false
+  ip_address: !secret rPi
+  filter:
+    include_entities:
+      ## Lights
+      - light.fibaro_kitchen_dimmer_level
+      - light.fibaro_table_dimmer_level
+      - light.fibaro_hallway_dimmer_level
+      - light.fibaro_stair_dimmer_level
+      ## Switches
+      - switch.radio
+      - switch.wemo_livingroom
+      - switch.wemo_bedroom
+      - switch.tv
+      - switch.kodi
+      ## Sensors
+      - sensor.fibaro_system_fgsd002_smoke_sensor_temperature
+      ## Device Tracker
+      # - device_tracker.davy_bayesian
