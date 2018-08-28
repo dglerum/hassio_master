@@ -14,4 +14,4 @@
   trigger:
   - platform: homeassistant
     event: start
-  initial_state: false
+  initial_state: false # change here to enable
