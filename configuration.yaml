@@ -82,6 +82,8 @@ logbook:
 #                    Includes                      #
 ####################################################
 
+light: !include includes/lights.yaml
+scene: !include includes/scenes.yaml
 input_select: !include includes/input_selects.yaml
 sensor: !include includes/sensors.yaml
 group: !include includes/groups.yaml
