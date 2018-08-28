@@ -1,0 +1,6 @@
+scene_selector:
+  name: Light Scene
+  icon: mdi:ceiling-light
+  options:
+    - Bright
+    - Movie
