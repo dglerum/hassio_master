@@ -35,7 +35,7 @@ panel_iframe:
 
 remote:
   - platform: harmony
-    name: Logitech Harmony
+    name: Harmony Remote
     host: !secret harmony_hub_ip
     activity: 25367510
     # scan_interval: 10
@@ -82,6 +82,7 @@ logbook:
 #                    Includes                      #
 ####################################################
 
+sensor: !include includes/sensors.yaml
 group: !include includes/groups.yaml
 automation: !include includes/automations.yaml
 script: !include includes/scripts.yaml
