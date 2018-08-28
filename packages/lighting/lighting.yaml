@@ -51,7 +51,7 @@ group:
       - switch.wemo_livingroom
 
   scene selection:
-    name: Select Scene
+    name: Scene Selection
     view: no
     entities:
       - input_select.scene_selector

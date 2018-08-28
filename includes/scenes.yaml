@@ -6,7 +6,7 @@
     light.fibaro_kitchen_dimmer_level:
       state: on
       brightness: 100
-    switch.wemo_livingroom: off
+    switch.wemo_livingroom: on
     light.hue_desk:
       state: on
       brightness: 150
@@ -28,7 +28,7 @@
     light.fibaro_kitchen_dimmer_level:
       state: on
       brightness: 220
-    switch.wemo_livingroom: on
+    switch.wemo_livingroom: off
     light.hue_desk:
       state: on
       brightness: 200
