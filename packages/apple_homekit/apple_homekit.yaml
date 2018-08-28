@@ -23,14 +23,21 @@ homekit:
       ## Device Tracker
       # - device_tracker.davy_bayesian
 
+group:
+  radio player:
+    control: hidden
+    entities:
+      - input_boolean.radio
+
 ################################################
 ## Apple Tv
 ################################################
 
 apple_tv:
-  - host: 192.168.0.7
-    login_id: 00000000-10de-bab8-5c52-32452354234506e
-    credentials: 8E6491D051D64EEA:AAAAAAAAAA226B2D409E446BC34B6AA65E2773F427471992AAAAAAAA57768
+  host: 192.168.1.17
+  login_id: 00000000-0bb2-01aa-38f0-982da7c149f9
+  credentials: ACCAC76047A3862F:1A2D831F20BEA13175030443D8EE2B5903C956FE55762F4AF9C775ED6F7F4AB2
+  start_off: true
 
 ################################################
 ## Input Boolean
@@ -38,6 +45,7 @@ apple_tv:
 
 input_boolean:
   radio:
+    initial: off
     name: HomePod Radio
     icon: mdi:radio
 
@@ -55,10 +63,13 @@ automation:
     to: 'on'
   condition: []
   action:
+  - service: media_player.turn_on
+    data:
+      entity_id: media_player.apple_tv
   - service: media_player.play_media
     data:
       entity_id: media_player.apple_tv
-      media_content_id: https://live-radio.lwc.vrtcdn.be/groupc/live/f404f0f3-3917-40fd-80b6-a152761072fe/live.isml/.m3u8
+      media_content_id: http://www.listenlive.eu/streams/belgium/be_vrtstubru.m3u
       media_content_type: music
 
 - id: Radio_Off
@@ -73,3 +84,9 @@ automation:
   - service: media_player.media_stop
     data:
       entity_id: media_player.apple_tv
+  # - service: media_player.media_stop
+  #   data:
+  #     entity_id: media_player.apple_tv
+  # - service: media_player.turn_off
+  #   data:
+  #     entity_id: media_player.apple_tv

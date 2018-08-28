@@ -13,11 +13,11 @@
 #                      iTunes                      #
 #                                                  #
 ####################################################
-
-- platform: itunes
-  host: 192.168.1.13
-  password: kodi
-  name: Computer
+# 
+# - platform: itunes
+#   host: 192.168.1.13
+#   password: kodi
+#   name: Computer
 
 ####################################################
 #                                                  #
