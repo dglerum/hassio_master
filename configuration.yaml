@@ -82,6 +82,7 @@ logbook:
 #                    Includes                      #
 ####################################################
 
+input_select: !include includes/input_selects.yaml
 sensor: !include includes/sensors.yaml
 group: !include includes/groups.yaml
 automation: !include includes/automations.yaml

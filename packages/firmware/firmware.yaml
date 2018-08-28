@@ -63,7 +63,7 @@ automation:
       entity_id: binary_sensor.ha_update_available
       to: 'on'
     action:
-      - service: notify.pushbullet
+      - service: notify.pushover
         data:
           message: 'New Update Available for HA'
           data:

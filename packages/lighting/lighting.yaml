@@ -50,8 +50,22 @@ group:
       - light.hue_livingroom
       - switch.wemo_livingroom
 
+  scene selection:
+    name: Select Scene
+    view: no
+    entities:
+      - input_select.scene_selector
+
 #################################################################
 #                         Automations                           #
 #################################################################
 
 automation:
+  - alias: Scene Selection
+    trigger:
+      platform: state
+      entity_id: input_select.scene_selector
+    action:
+      service: scene.turn_on
+      data_template:
+        entity_id: scene.{{trigger.to_state.state}}
