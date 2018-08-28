@@ -4,6 +4,7 @@
 #                                                  #
 ####################################################
 
+# TODO: if enabled it gives a zeroconf error as this runs on live rPi
 - action:
   - delay: 00:05  # Waits 5 minutes
   - service: script.1523505263098
@@ -13,4 +14,4 @@
   trigger:
   - platform: homeassistant
     event: start
-  
+  initial_state: false
