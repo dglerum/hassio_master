@@ -22,3 +22,54 @@ homekit:
       - sensor.fibaro_system_fgsd002_smoke_sensor_temperature
       ## Device Tracker
       # - device_tracker.davy_bayesian
+
+################################################
+## Apple Tv
+################################################
+
+apple_tv:
+  - host: 192.168.0.7
+    login_id: 00000000-10de-bab8-5c52-32452354234506e
+    credentials: 8E6491D051D64EEA:AAAAAAAAAA226B2D409E446BC34B6AA65E2773F427471992AAAAAAAA57768
+
+################################################
+## Input Boolean
+################################################
+
+input_boolean:
+  radio:
+    name: HomePod Radio
+    icon: mdi:radio
+
+################################################
+## Automation
+################################################
+
+automation:
+- id: Radio_On
+  alias: Radio_On
+  initial_state: 'on'
+  trigger:
+  - platform: state
+    entity_id: input_boolean.radio
+    to: 'on'
+  condition: []
+  action:
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.apple_tv
+      media_content_id: https://live-radio.lwc.vrtcdn.be/groupc/live/f404f0f3-3917-40fd-80b6-a152761072fe/live.isml/.m3u8
+      media_content_type: music
+
+- id: Radio_Off
+  alias: Radio_Off
+  initial_state: 'on'
+  trigger:
+  - platform: state
+    entity_id: input_boolean.radio
+    to: 'off'
+  condition: []
+  action:
+  - service: media_player.media_stop
+    data:
+      entity_id: media_player.apple_tv
