@@ -1,3 +1,30 @@
+input_boolean:
+  guest_mode:
+    name: Guest Mode
+    initial: off
+
+  alert_mode:
+    name: Alert Mode
+    initial: off
+
+  speech_notifications:
+    name: Speech Notifications
+    initial: off
+
+  last_message:
+    name: Last Message
+    initial: off
+
+group:
+  speech_engine:
+    control: hidden
+    entities:
+      - input_boolean.guest_mode
+      - input_boolean.alert_mode
+      - input_boolean.speech_notifications
+      - input_boolean.last_message
+      - script.voice_notify
+
 script:
   voice_notify:
     sequence:
@@ -23,7 +50,7 @@ script:
           conditions:
             - condition: template
               value_template: >
-                {% if is_state('media_player.livingroomCC', 'playing') %}
+                {% if is_state('media_player.apple_tv', 'playing') %}
                 false
                 {% else %}
                 true
@@ -34,25 +61,25 @@ script:
         - condition: state
           entity_id: input_boolean.speech_notifications
           state: 'on'
-    - service: switch.turn_on
-      entity_id: switch.living_room_amp
-    - delay: '00:00:05'
+    # - service: switch.turn_on
+    #   entity_id: switch.living_room_amp
+    # - delay: '00:00:05'
 
     - service: media_player.turn_on
-      entity_id: media_player.livingroomCC
+      entity_id: media_player.apple_tv
 
-    - service: media_player.volume_set
-      entity_id:
-        - media_player.livingroomCC
-      data_template:
-        volume_level: >
-          {% if now().strftime("%H")|int < 12 and now().strftime("%H")|int > 6%}
-          0.25
-          {% elif now().strftime("%H")|int > 12 and now().strftime("%H")|int < 20%}
-          0.45
-          {% else %}
-          0.20
-          {% endif %}
+    # - service: media_player.volume_set
+    #   entity_id:
+    #     - media_player.apple_tv
+    #   data_template:
+    #     volume_level: >
+    #       {% if now().strftime("%H")|int < 12 and now().strftime("%H")|int > 6%}
+    #       0.25
+    #       {% elif now().strftime("%H")|int > 12 and now().strftime("%H")|int < 20%}
+    #       0.45
+    #       {% else %}
+    #       0.20
+    #       {% endif %}
 
     - service: mqtt.publish
       data_template:
@@ -61,7 +88,7 @@ script:
         retain: true
 
     - service: tts.amazon_polly_say
-      entity_id: media_player.livingroomCC
+      entity_id: media_player.apple_tv
       data_template:
         message: >
           {% if now().strftime("%H")|int < 12 and now().strftime("%H")|int > 6%}
