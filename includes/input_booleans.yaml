@@ -1,0 +1,4 @@
+  radio:
+    initial: off
+    name: HomePod Radio
+    icon: mdi:radio
