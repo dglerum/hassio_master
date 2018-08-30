@@ -25,3 +25,6 @@
 
 - platform: cert_expiry
   host: dglerum.noip.me
+
+- platform: uptime
+  unit_of_measurement: days
