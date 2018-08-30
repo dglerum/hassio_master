@@ -85,6 +85,7 @@ recorder: !include includes/recorder.yaml
 light: !include includes/lights.yaml
 scene: !include includes/scenes.yaml
 input_select: !include includes/input_selects.yaml
+input_boolean: !include includes/input_booleans.yaml
 sensor: !include includes/sensors.yaml
 group: !include includes/groups.yaml
 automation: !include includes/automations.yaml
