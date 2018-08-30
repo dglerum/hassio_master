@@ -64,26 +64,25 @@ http:
 #                      Hass.io                     #
 ####################################################
 
-recorder:
-  purge_interval: 2
-  purge_keep_days: 5
-
 frontend:
 config:
 updater:
 discovery:
-  # ignore:
-  #   - apple_tv
+  ignore:
+    - apple_tv
+    - harmony
 conversation:
 history:
 logbook:
-# map:
-# cloud:
+map:
+wemo:
+
 
 ####################################################
 #                    Includes                      #
 ####################################################
 
+recorder: !include includes/recorder.yaml
 light: !include includes/lights.yaml
 scene: !include includes/scenes.yaml
 input_select: !include includes/input_selects.yaml
