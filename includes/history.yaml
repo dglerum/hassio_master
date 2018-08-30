@@ -1,0 +1,8 @@
+####################################################
+#                      History                     #
+####################################################
+
+  # use_include_order: true
+  # include:
+  #   entities:
+  #     - group.downstairs_lights
