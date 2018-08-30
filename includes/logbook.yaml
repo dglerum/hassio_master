@@ -5,5 +5,10 @@
   exclude:
     domains:
       - updater
-    # entities:
-    #   -
+    entities:
+      - light.desk_downstairs
+      - light.hue_desk
+      - light.hue_lightstrip
+      - light.hue_livingroom
+      - light.hue_wc_downstairs
+      - light.hue_wc_upstairs
