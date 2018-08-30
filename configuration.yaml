@@ -68,7 +68,6 @@ frontend:
 config:
 updater:
 conversation:
-logbook:
 map:
 wemo:
 discovery:
@@ -80,6 +79,7 @@ discovery:
 #                    Includes                      #
 ####################################################
 
+logbook: !include includes/logbook.yaml
 history: !include includes/history.yaml
 recorder: !include includes/recorder.yaml
 light: !include includes/lights.yaml

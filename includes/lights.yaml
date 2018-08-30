@@ -10,3 +10,17 @@
     - host: 192.168.1.2
       allow_unreachable: true
       allow_hue_groups: false
+
+- platform: group
+  name: Living Room Lights
+  entities:
+    - light.desk_downstairs
+    - light.hue_desk
+    - light.hue_lightstrip
+    - light.hue_livingroom
+
+- platform: group
+  name: Toilet Lights
+  entities:
+    - light.hue_wc_downstairs
+    - light.hue_wc_upstairs
