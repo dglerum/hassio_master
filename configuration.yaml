@@ -92,3 +92,4 @@ automation: !include includes/automations.yaml
 script: !include includes/scripts.yaml
 zone: !include includes/zones.yaml
 media_player: !include includes/media_players.yaml
+weblink: !include includes/weblinks.yaml

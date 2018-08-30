@@ -1,0 +1,7 @@
+####################################################
+#                      Weblinks                    #
+####################################################
+  entities:
+    - name: Stubru Stream
+      url: http://www.listenlive.eu/streams/belgium/be_vrtstubru.m3u
+      icon: mdi:video
