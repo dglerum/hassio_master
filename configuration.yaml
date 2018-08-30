@@ -67,21 +67,21 @@ http:
 frontend:
 config:
 updater:
+conversation:
+
+logbook:
+map:
+wemo:
 discovery:
   ignore:
     - apple_tv
     - harmony
-conversation:
-history:
-logbook:
-map:
-wemo:
-
 
 ####################################################
 #                    Includes                      #
 ####################################################
 
+history: !include includes/history.yaml
 recorder: !include includes/recorder.yaml
 light: !include includes/lights.yaml
 scene: !include includes/scenes.yaml
